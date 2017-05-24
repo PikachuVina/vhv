@@ -1,6 +1,6 @@
 <?php 
-include '../include/config.php'; 
-include '../include/head.php'; 
+include './include/config.php'; 
+include './include/head.php'; 
 $rand = rand(100000,999999); 
 ?> 
 <div class="col-md-4 col-lg-offset-4"> 
@@ -78,5 +78,5 @@ echo '<meta http-equiv="refresh" content="0;url=index.php">';
 } 
 </style> 
 <?php 
-include '../include/foot.php'; 
+include './include/foot.php'; 
 ?>
