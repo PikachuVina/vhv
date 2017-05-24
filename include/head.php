@@ -37,6 +37,7 @@ $version = '1.0';
     <meta name='revisit-after' content='1 days'>
     <meta name='author' content='Bùi Mạnh Nghĩa'>
     <!-- CSS & JS -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet' href='//fontawesome.io/assets/font-awesome/css/font-awesome.css'>
     <style>
