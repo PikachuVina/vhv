@@ -11,7 +11,7 @@ $id = htmlspecialchars($_POST['id']);
 $vnd = htmlspecialchars($_POST['vnd']); 
 $limit = htmlspecialchars($_POST['limit']); 
 @mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`+'$vnd', `limit`=`limit`+'$limit' WHERE `id`='$id'"); 
-echo '<div class="thongbao">Successful</div>'; 
+echo '<div class="thongbao">Thành công</div>'; 
 } 
 ?> 
   <div class="panel-group"> 
