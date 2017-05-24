@@ -188,7 +188,7 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
           </p> 
           <p> 
             <li class="list-group-item">Số Dư:
-              <?= $user['vnd'] ?> VNĐ
+              <?= number_format($user['vnd']) ?> VNĐ
             </li>
           </p>
           <p>
