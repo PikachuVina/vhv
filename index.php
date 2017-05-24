@@ -109,12 +109,12 @@ $goi = htmlspecialchars($_POST['goi']);
 $check = @mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `VIP` WHERE `user`=".$user['id']."")); 
 $kiemtraid = @mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `VIP` WHERE `idfb`=".$id."")); 
 if(!$id || !$name || !$goi){ 
-echo $kiemtraid.'<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div>'; 
+echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div>'; 
 }else if($user['limit'] <= $check) echo '<div class="thongbao">Bạn đã sử dụng tối đa UID được phép</div>'; 
 else if($user['vnd'] < $vnd[$goi]){ 
 echo '<div class="thongbao">Bạn không đủ tiền để mua VIP</div>'; 
 }
-else if($id == $kiemtraid){ 
+else if($id == 1){ 
 echo '<div class="thongbao">UID đã tồn tại trên hệ thống</div>'; 
 }else{ 
 @mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
