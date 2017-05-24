@@ -32,7 +32,7 @@ include './include/head.php';
     </div>
     <div class="panel-body">
 • Nạp tiền vào trang web qua các trang web đổi mua - bán thẻ cào và nhận được 100% giá trị tiền mặt vào tài khoản sau khi nạp.</br>
-• Thông tin chuyển khoản:</br>
+• Thông tin chuyển khoản:</br></br>
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -51,6 +51,11 @@ include './include/head.php';
           </tr>
         </tbody>
       </table>
+</br>• Nội dung: <font color="red">CTV - TTK</font>
+• Trong đó: </br>
+- CTV: là cú pháp của web. </br>
+- TTK: là tên tài khoản của bạn. </br>
+• Sau khi nạp, vui lòng liên hệ và báo với ADMIN để được cộng tiền vào tài khoản cho bạn trên trang web.</br>
     </div>
   </div>
 </div>
