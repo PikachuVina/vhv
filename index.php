@@ -106,7 +106,7 @@ if(isset($_POST['add'])){
 $id = htmlspecialchars($_POST['id']); 
 $name = htmlspecialchars($_POST['name']); 
 $goi = htmlspecialchars($_POST['goi']); 
-$check = @mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `VIP` WHERE `user`=".$user['id']."")); 
+$check = @mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `VIP` WHERE `user`=".$user['id']."")); 
 if(!$id || !$name || !$goi){ 
 echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div>'; 
 }else if($user['limit'] < $check) echo $check.'<div class="thongbao">Bạn đã sử dụng tối đa UID được phép</div>'; 
