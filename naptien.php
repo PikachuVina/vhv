@@ -55,7 +55,7 @@ include './include/head.php';
 • Trong đó: </br>
 - CTV: là cú pháp của web. </br>
 - TTK: thay bằng Username của bạn. </br>
-• Sau khi nạp, vui lòng liên hệ và báo với ADMIN để được cộng tiền vào tài khoản cho bạn trên trang web.</br>
+• Sau khi nạp, vui lòng liên hệ và báo với <a href="http://facebook.com/bmn.2312"></b>ADMIN</b></a> để được cộng tiền vào tài khoản cho bạn trên trang web.</br>
     </div>
   </div>
 </div>
