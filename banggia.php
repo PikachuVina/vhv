@@ -9,7 +9,7 @@ $contact = '<a class="btn btn-danger" href="https://www.facebook.com/messages/t/
   <div class="panel panel-primary">
     <div class="panel-heading">
       <i class="fa fa-thumbs-o-up">
-      </i> Vip Like Tương Tác
+      </i> Bảng Giá Vip Like
     </div>
     <div class="panel-body">
       <table class="table table-bordered">
@@ -85,6 +85,16 @@ $contact = '<a class="btn btn-danger" href="https://www.facebook.com/messages/t/
             </td>
           </tr>
         </tbody>
+		<font color="green"><b>
+<br>
+
+<font color="red"><b>➡</b> Mời bạn inbox Facebook: 
+<a rel="nofollow" href="http://fb.com/100004294419791" title="Tìm trên facebook.com"> Bùi Mạnh Nghĩa</a> nạp tiền và hỗ trợ!</font>
+ <br>
+<font color="red"><b>➡</b> Ngoài ra Cộng tác viên có thể nâng giá của gói like lên và bán lại cho khách.<br>
+<font color="red"><b>➡</b> Like sẽ bắt đầu lên từ 0-30 phút kể từ khi cài. Vì vậy nếu có bị chậm thì mọi người cứ bình tĩnh!!<br>
+<b>➡</b> Lưu ý: Like là người dùng facebook thật 100% và bạn có thể chọn tốc độ like lên chậm hoặc nhanh, vui lòng liên hệ <a rel="nofollow" href="http://fb.com/100004294419791" title="Tìm trên facebook.com">An Vu</a> để biết thêm chi tiết.
+</font></font></b></font>
       </table>
     </div>
   </div>
