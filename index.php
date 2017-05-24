@@ -169,7 +169,7 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
       <div class="panel-body"> 
         <div class="form-group"> 
           <p> 
-            <li class="list-group-item">ID Nick: 
+            <li class="list-group-item">Mã Tài Khoản: 
               <?= $_SESSION['user'] ?> 
             </li> 
           </p> 
@@ -180,12 +180,12 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
           </p> 
           <p> 
             <li class="list-group-item">Số Dư:
-              <?= $user['vnd'] ?>
+              <?= $user['vnd'] ?> VNĐ
             </li>
           </p>
           <p>
             <li class="list-group-item">Tối Đa Được Lưu:
-              <?=  $user['limit'] ?>
+              <?=  $user['limit'] ?> UID
             </li> 
           </p> 
           <p> 

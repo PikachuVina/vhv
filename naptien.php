@@ -54,7 +54,7 @@ include './include/head.php';
 • Nội dung: <font color="red">CTV - TTK</font></br>
 • Trong đó: </br>
 - CTV: là cú pháp của web. </br>
-- TTK: thay bằng tên tài khoản của bạn. </br>
+- TTK: thay bằng Username của bạn. </br>
 • Sau khi nạp, vui lòng liên hệ và báo với ADMIN để được cộng tiền vào tài khoản cho bạn trên trang web.</br>
     </div>
   </div>
@@ -87,7 +87,7 @@ include './include/head.php';
 • Nội dung: <font color="red">CTV - TTK</font></br>
 • Trong đó: </br>
 - CTV: là cú pháp của web. </br>
-- TTK: thay bằng tên tài khoản của bạn.</br> 
+- TTK: thay bằng Username của bạn.</br> 
 • Sau khi nạp, vui lòng liên hệ và báo với <a href="http://facebook.com/bmn.2312"></b>ADMIN</b></a> để được cộng tiền vào tài khoản cho bạn trên trang web.</br>
     </div>
   </div>
