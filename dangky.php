@@ -22,7 +22,7 @@ echo '<div class="thongbao">Username is exist</div>';
 `vnd`=0, 
 "); 
 echo '<div class="thongbao">Successful</div>'; 
-echo '<meta http-equiv="refresh" content="0;url=index.php">'; 
+echo '<meta http-equiv="refresh" content="0;url=index.html">'; 
 } 
 } 
 ?> 

@@ -32,7 +32,7 @@ echo '<meta http-equiv="refresh" content="0">';
       </div>
       <div class="panel-body">
         <li class="list-group-item">
-          Khi đăng nhập và sử dụng hệ thống bạn đã đồng ý với <a href="/rule.php">Qui định người dùng</a></br>
+          Khi đăng nhập và sử dụng hệ thống bạn đã đồng ý với <a href="/rule.html">Qui định người dùng</a></br>
           Cập nhật hệ thống ngày: 24/05/2017 </br>
           + Panel quản lí cho CTV mua vip like tương tác, mua người theo dõi và buzz like.</br>
           + Hệ thống giúp bạn cài like trực tiếp cho khách hàng của bạn. </br>
@@ -197,7 +197,7 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
             </li> 
           </p> 
           <p> 
-            <a href="logout.php" class="btn btn-danger">Log Out 
+            <a href="dangxuat.html" class="btn btn-danger">Log Out 
             </a> 
           </p> 
         </div> 

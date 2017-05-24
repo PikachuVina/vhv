@@ -129,11 +129,14 @@ $version = '1.0';
                     <a href="/"><i class="fa fa-home"></i> Home</a>
                   </li>
 				  <li>
-                    <a href="/naptien.php"><i class="fa fa-money"></i> Nạp Tiền</a>
+                    <a href="/dangky.html"><i class="fa fa-group"></i> Đăng Ký</a>
+                  </li>
+				  <li>
+                    <a href="/naptien.html"><i class="fa fa-money"></i> Nạp Tiền</a>
                   </li>
 
                   <li>
-                    <a href="/banggia.php"><i class="fa fa-list"></i> Bảng Giá</a>
+                    <a href="/banggia.html"><i class="fa fa-list"></i> Bảng Giá</a>
                   </li>
                   <li>
                     <a target="_blank" href="https://facebook.com/bmn.2312"><i class="fa fa-user-secret"></i> Liên Hệ Admin</a>
