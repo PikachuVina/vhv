@@ -31,6 +31,8 @@ include './include/head.php';
       </i> NẠP BẰNG PHƯƠNG THỨC KHÁC • PHÍ: 0%
     </div>
     <div class="panel-body">
+• Nạp tiền vào trang web qua các trang web đổi mua - bán thẻ cào và nhận được 100% giá trị tiền mặt vào tài khoản sau khi nạp.</br>
+• Thông tin chuyển khoản:</br>
       <table class="table table-bordered">
         <thead>
           <tr>
