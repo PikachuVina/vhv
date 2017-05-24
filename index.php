@@ -100,7 +100,7 @@ $vnd = array(0, 100000, 200000, 350000, 600000, 1000000);
 if(isset($_POST['del'])){ 
 $id = htmlspecialchars($_POST['id']); 
 @mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM `VIP` WHERE `user`=".$user['id']." AND `idfb`='$id'"); 
-echo '<div class="thongbao">Successful</div>'; 
+echo '<div class="thongbao">Đã xóa ID thành công</div>'; 
 } 
 if(isset($_POST['add'])){ 
 $id = htmlspecialchars($_POST['id']); 
@@ -109,14 +109,14 @@ $goi = htmlspecialchars($_POST['goi']);
 $check = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `VIP` WHERE `user`=".$user['id']."")); 
 if(!$id || !$name || !$goi){ 
 echo '<div class="thongbao">Please fill form fully</div>'; 
-}else if($user['limit'] < $check) echo '<div class="thongbao">You have used the maximum ID</div>'; 
+}else if($user['limit'] < $check) echo '<div class="thongbao">Bạn đã sử dụng tối đa ID được phép</div>'; 
 else if($user['vnd'] < $vnd[$goi]){ 
-echo '<div class="thongbao">No enough money</div>'; 
+echo '<div class="thongbao">Bạn không đủ tiền để mua VIP</div>'; 
 }else{ 
 @mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
 $time = time()+30*24*3600; 
 @mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO `VIP` SET `idfb`='$id', `name`='$name', `user`=".$user['id'].", `goi`='$goi', `time`='$time'"); 
-echo '<div class="thongbao">Successful</div>'; 
+echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh" content="0">'; 
 } 
 } 
 ?> 
@@ -184,7 +184,7 @@ echo '<div class="thongbao">Successful</div>';
             </li>
           </p>
           <p>
-            <li class="list-group-item">Tối Đa:
+            <li class="list-group-item">Tối Đa Được Lưu:
               <?=  $user['limit'] ?>
             </li> 
           </p> 
