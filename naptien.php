@@ -84,7 +84,7 @@ include './include/head.php';
         </tbody>
       </table>
 • Người thụ hưởng: BUI MANH NGHIA.</br>
-• Nội dung: CTV - TTK</br>
+• Nội dung: <font color="red">CTV - TTK</font></br>
 • Trong đó: </br>
 - CTV: là cú pháp của web. </br>
 - TTK: thay bằng tên tài khoản của bạn.</br> 
