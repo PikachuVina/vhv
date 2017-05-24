@@ -26,9 +26,25 @@ echo '<meta http-equiv="refresh" content="0">';
 } 
 } 
 ?> 
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><i class="fa fa-bookmark" aria-hidden="true"></i> Thông Báo
+      </div>
+      <div class="panel-body">
+        <li class="list-group-item">
+          Khi đăng nhập và sử dụng hệ thống bạn đã đồng ý với <a href="/rule.php">Qui định người dùng</a>
+          Cập nhật hệ thống ngày: 24/05/2017 
+          + Panel quản lí cho CTV mua vip like tương tác, mua người theo dõi và buzz like.
+          + Hệ thống giúp bạn cài like trực tiếp cho khách hàng của bạn. 
+          + Giá bán hợp với CTV rẻ nhất nhì việt nam !!
+
+        </li>
+      </div>
+    </div>
+  </div>
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
-      <div class="panel-heading">Đăng Nhập Vip 
+      <div class="panel-heading"><i class="fa fa-key" aria-hidden="true"></i> Đăng Nhập Vip 
       </div> 
       <div class="panel-body"> 
         <form action="" method="POST"> 
