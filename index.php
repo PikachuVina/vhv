@@ -15,9 +15,9 @@ $captcha_number = htmlspecialchars($_POST['captcha_number']);
 if($username && $password && $captcha){ 
 $check = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
 if($captcha != $captcha_number ){ 
-echo '<div class="thongbao">Invalid captcha</div>'; 
+echo '<div class="thongbao">Captcha bạn nhập vào không đúng, Vui lòng nhập lại</div>'; 
 }else if($check < 1){ 
-echo '<div class="thongbao">Invalid username or password</div>'; 
+echo '<div class="thongbao">Tài khoản của bạn không đúng, Vui lòng liên hệ Admin để đăng ký tài khoản</div>'; 
 }else{ 
 $res = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
 $_SESSION['user'] = $res['id']; 
@@ -28,7 +28,7 @@ echo '<meta http-equiv="refresh" content="0">';
 ?> 
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
-      <div class="panel-heading">Login 
+      <div class="panel-heading">Đăng Nhập Vip 
       </div> 
       <div class="panel-body"> 
         <form action="" method="POST"> 

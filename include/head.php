@@ -1,6 +1,6 @@
 <?php
-$name = 'AutoFB.Mobi';
-$title = 'Auto Request - Auto Like - Auto Follow - Auto Sub';
+$name = 'Cộng Tác Viên';
+$title = 'Hệ thống VIP LIKE tăng like,sub,share facebook';
 $color = '#'.rand(0,9).rand(0,9).rand(0,9);
 $version = '1.0';
 ?>
@@ -19,12 +19,12 @@ $version = '1.0';
     <meta name='YandexBot' content='index, follow'>
     <meta name='google-site-verification' content='wpADGy2bjBNtbkh-tlgN_xzKKn5njWRduxwvsX2ZbbA'>
     <!-- Og -->
-    <meta property='og:url' content='/assets/img/logo.png'>
+    <meta property='og:url' content='./assets/img/logo.png'>
     <meta property='og:type' content='website'>
     <meta property='og:title' content='<?= $name ?> - <?= $title ?>'>
     <meta property='og:description' content='<?= $name ?> - <?= $title ?>'>
     <meta property='og:locale' content='vi_VN'>
-    <meta property='og:image' content='/assets/img/logo.png'>
+    <meta property='og:image' content='./assets/img/logo.png'>
     <!-- Twitter -->
     <meta name='twitter:card' content='<?= $name ?>'>
     <meta name='twitter:site' content='<?= $name ?>'>
@@ -33,7 +33,7 @@ $version = '1.0';
     <!-- Other -->
     <meta http-equiv='content-language' content='en'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href='/assets/img/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link href='./assets/img/favicon.ico' rel='shortcut icon' type='image/x-icon'>
     <meta name='revisit-after' content='1 days'>
     <meta name='author' content='Bùi Mạnh Nghĩa'>
     <!-- CSS & JS -->
@@ -125,29 +125,17 @@ $version = '1.0';
                 </ul>
                 <ul class='nav navbar-nav navbar-right'>
                   <li>
-                    <a href='https://www.facebook.com/coideptrai.info' target='_blank'><i class="fa fa-paper-plane-o"></i> Contact
-                    </a>
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
                   </li>
 				  <li>
-                    <a href='/api' target='_blank'><i class='fa fa-comments-o'></i> Phòng chát
-                    </a>
+                    <a href="/naptien.php"><i class="fa fa-money"></i> Nạp Tiền</a>
                   </li>
 
                   <li>
-                    <a href='/vip/vip.php' target='_blank'><i class='fa fa-thumbs-o-up'></i> Vip Like
-                    </a>
+                    <a href="/banggia.php"><i class="fa fa-list"></i> Bảng Giá</a>
                   </li>
-                  <li class='dropdown'>
-                    <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'><i class='fa fa-link'></i> Text Link 
-                      <span class='caret'>
-                      </span>
-                    </a>
-                    <ul class='dropdown-menu'>
-                      <li>
-                        <a href='#' target='_blank'>Nothing Here
-                        </a>
-                      </li>
-                    </ul>
+                  <li>
+                    <a target="_blank" href="https://facebook.com/bmn.2312"><i class="fa fa-user-secret"></i> Liên Hệ Admin</a>
                   </li>
                 </ul>
               </div>
