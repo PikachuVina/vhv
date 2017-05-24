@@ -10,7 +10,7 @@ header('HTTP/1.0 401 Unauthorized');
 die('<center>À Được</center>'); 
 } 
 
-@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `token` ( 
+@mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `token` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -18,7 +18,7 @@ die('<center>À Được</center>');
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `account` ( 
+@mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `account` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `username` varchar(32) NOT NULL, 
   `password` varchar(32)  NOT NULL, 
@@ -27,7 +27,7 @@ die('<center>À Được</center>');
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `vip` ( 
+@mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `vip` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `name` varchar(32)  NOT NULL, 
@@ -37,7 +37,7 @@ die('<center>À Được</center>');
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `chat` ( 
+@mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `chat` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32) NOT NULL, 
   `name` varchar(32) NOT NULL, 
@@ -46,7 +46,7 @@ die('<center>À Được</center>');
   PRIMARY KEY (`id`) 
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `block` ( 
+@mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `block` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32) NOT NULL, 
   `thoigian` varchar(32) NOT NULL, 

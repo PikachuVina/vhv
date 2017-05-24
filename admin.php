@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 $id = htmlspecialchars($_POST['id']); 
 $vnd = htmlspecialchars($_POST['vnd']); 
 $limit = htmlspecialchars($_POST['limit']); 
-@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`+'$vnd', `limit`=`limit`+'$limit' WHERE `id`='$id'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`+'$vnd', `limit`=`limit`+'$limit' WHERE `id`='$id'"); 
 echo '<div class="thongbao">Thành công</div>'; 
 } 
 ?> 

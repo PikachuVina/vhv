@@ -13,13 +13,13 @@ $password = htmlspecialchars($_POST['password']);
 $captcha = htmlspecialchars($_POST['captcha']); 
 $captcha_number = htmlspecialchars($_POST['captcha_number']); 
 if($username && $password && $captcha){ 
-$check = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
+$check = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
 if($captcha != $captcha_number ){ 
 echo '<div class="thongbao">Captcha bạn nhập vào không đúng, Vui lòng nhập lại</div>'; 
 }else if($check < 1){ 
 echo '<div class="thongbao">Tài khoản của bạn không đúng, Vui lòng liên hệ Admin để đăng ký tài khoản</div>'; 
 }else{ 
-$res = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
+$res = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
 $_SESSION['user'] = $res['id']; 
 echo '<meta http-equiv="refresh" content="0">'; 
 } 
@@ -76,7 +76,7 @@ echo '<meta http-equiv="refresh" content="0">';
 </div> 
 <?php 
 }else{ 
-$user = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `ACCOUNT` WHERE `id`=".$_SESSION['user']." ORDER BY RAND()")); 
+$user = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `id`=".$_SESSION['user']." ORDER BY RAND()")); 
 ?> 
 <div class="col-lg-12"> 
   <div class="panel-group"> 
@@ -99,15 +99,15 @@ $like = array(0, 200, 500, 1000, 2000, 5000);
 $vnd = array(0, 100000, 200000, 350000, 600000, 1000000); 
 if(isset($_POST['del'])){ 
 $id = htmlspecialchars($_POST['id']); 
-@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM `VIP` WHERE `user`=".$user['id']." AND `idfb`='$id'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "DELETE FROM `VIP` WHERE `user`=".$user['id']." AND `idfb`='$id'"); 
 echo '<div class="thongbao">Đã xóa ID thành công</div>'; 
 } 
 if(isset($_POST['add'])){ 
 $id = htmlspecialchars($_POST['id']); 
 $name = htmlspecialchars($_POST['name']); 
 $goi = htmlspecialchars($_POST['goi']); 
-$check = @mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `VIP` WHERE `user`=".$user['id']."")); 
-$kiemtraid = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT `idfb` FROM `VIP` WHERE `idfb`=".$id."")); 
+$check = @mysqli_num_rows(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `VIP` WHERE `user`=".$user['id']."")); 
+$kiemtraid = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT `idfb` FROM `VIP` WHERE `idfb`=".$id."")); 
 if(!$id || !$name || !$goi){ 
 	echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div>'; 
 		}
@@ -121,9 +121,9 @@ else if($id == $kiemtraid['idfb']){
 	echo '<div class="thongbao">UID đã tồn tại trên hệ thống</div>'; 
 		}
 else	{ 
-@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
+@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
 $time = time()+30*24*3600; 
-@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO `VIP` SET `idfb`='$id', `name`='$name', `user`=".$user['id'].", `goi`='$goi', `time`='$time'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `VIP` SET `idfb`='$id', `name`='$name', `user`=".$user['id'].", `goi`='$goi', `time`='$time'"); 
 echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh" content="0">'; 
 		} 
 		} 
@@ -227,7 +227,7 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
           </thead> 
           <tbody> 
             <?php 
-$req = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT `idfb`, `name`, `goi`, `time` FROM `VIP` WHERE `user`=".$user['id']." LIMIT 10"); 
+$req = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT `idfb`, `name`, `goi`, `time` FROM `VIP` WHERE `user`=".$user['id']." LIMIT 10"); 
 while($res = mysqli_fetch_array($req)){ 
 ?> 
             <tr> 
