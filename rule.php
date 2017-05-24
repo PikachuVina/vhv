@@ -13,7 +13,7 @@ include './include/head.php';
       + Hệ thống sẽ lên like trong vòng 0-20p sau khi post bài.</br>
       + Khi lên like, hệ thống sẽ chọn bài mới nhất để lên. Nghĩa là muốn post liên tiếp mà lên đủ, bạn phải post và chờ hệ thống bắt đầu lên like rồi hãy post tiếp.</br>
       + Album có thể sẽ ko lên like nếu trùng tên, nên post album có tên khác nhau.</br>
-      + Vui lòng liên hệ <a href="http://facebook.com/bmn.2312">Admin</a> Nếu như bạn gặp lỗi, nếu có trường hợp khiêu khích hoặc muốn up phốt ba cái nhảm nhỉ thì sẽ lập tức bị band khỏi hệ thống.</br>
+      + Vui lòng liên hệ <a href="http://facebook.com/bmn.2312"></b>Admin</b></a> Nếu như bạn gặp lỗi, nếu có trường hợp khiêu khích hoặc muốn up phốt ba cái nhảm nhỉ thì sẽ lập tức bị band khỏi hệ thống.</br>
       Nếu có thắc mắc về vấn đề nạp tiền hay cách sử dụng hệ thống. Xin vui lòng liên hệ <a href="http://facebook.com/bmn.2312">Admin</a></br>
     </div>
   </div>

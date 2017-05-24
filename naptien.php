@@ -16,7 +16,7 @@ include './include/head.php';
         </thead>
         <tbody>
           <tr>
-            <td>Vui lòng liên hệ ADMIN để nạp bằng thẻ cào</td>
+            <td>Vui lòng liên hệ <a href="http://facebook.com/bmn.2312"></b>ADMIN</b></a> để nạp bằng thẻ cào</td>
           </tr>
         </tbody>
       </table>
@@ -51,7 +51,7 @@ include './include/head.php';
           </tr>
         </tbody>
       </table>
-• Nội dung: <font color="red">CTV - TTK</font>
+• Nội dung: <font color="red">CTV - TTK</font></br>
 • Trong đó: </br>
 - CTV: là cú pháp của web. </br>
 - TTK: thay bằng tên tài khoản của bạn. </br>
@@ -88,7 +88,7 @@ include './include/head.php';
 • Trong đó: </br>
 - CTV: là cú pháp của web. </br>
 - TTK: thay bằng tên tài khoản của bạn.</br> 
-• Sau khi nạp, vui lòng liên hệ và báo với ADMIN để được cộng tiền vào tài khoản cho bạn trên trang web.</br>
+• Sau khi nạp, vui lòng liên hệ và báo với <a href="http://facebook.com/bmn.2312"></b>ADMIN</b></a> để được cộng tiền vào tài khoản cho bạn trên trang web.</br>
     </div>
   </div>
 </div>
