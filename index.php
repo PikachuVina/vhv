@@ -32,12 +32,11 @@ echo '<meta http-equiv="refresh" content="0">';
       </div>
       <div class="panel-body">
         <li class="list-group-item">
-          Khi đăng nhập và sử dụng hệ thống bạn đã đồng ý với <a href="/rule.php">Qui định người dùng</a>
-          Cập nhật hệ thống ngày: 24/05/2017 
-          + Panel quản lí cho CTV mua vip like tương tác, mua người theo dõi và buzz like.
-          + Hệ thống giúp bạn cài like trực tiếp cho khách hàng của bạn. 
-          + Giá bán hợp với CTV rẻ nhất nhì việt nam !!
-
+          Khi đăng nhập và sử dụng hệ thống bạn đã đồng ý với <a href="/rule.php">Qui định người dùng</a></br>
+          Cập nhật hệ thống ngày: 24/05/2017 </br>
+          + Panel quản lí cho CTV mua vip like tương tác, mua người theo dõi và buzz like.</br>
+          + Hệ thống giúp bạn cài like trực tiếp cho khách hàng của bạn. </br>
+          + Giá bán hợp với CTV rẻ nhất nhì việt nam !!</br>
         </li>
       </div>
     </div>
