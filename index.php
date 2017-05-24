@@ -100,7 +100,7 @@ $vnd = array(0, 100000, 200000, 350000, 600000, 1000000);
 if(isset($_POST['del'])){ 
 $id = htmlspecialchars($_POST['id']); 
 @mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM `VIP` WHERE `user`=".$user['id']." AND `idfb`='$id'"); 
-echo '<div class="thongbao">Đã xóa ID thành công</div>'; 
+echo '<div class="thongbao">Đã xóa ID thành công</div><meta http-equiv="refresh" content="0">'; 
 } 
 if(isset($_POST['add'])){ 
 $id = htmlspecialchars($_POST['id']); 
@@ -109,10 +109,10 @@ $goi = htmlspecialchars($_POST['goi']);
 $user = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `ACCOUNT` WHERE `id`=".$_SESSION['user']." ORDER BY RAND()")); 
 $check = @mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `VIP` WHERE `user`=".$user['id']." ORDER BY RAND()")); 
 if(!$id || !$name || !$goi){ 
-echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div>'; 
+echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div><meta http-equiv="refresh" content="0">'; 
 }else if($user['limit'] < $check) echo $check.'<div class="thongbao">Bạn đã sử dụng tối đa UID được phép</div>'; 
 else if($user['vnd'] < $vnd[$goi]){ 
-echo '<div class="thongbao">Bạn không đủ tiền để mua VIP</div>'; 
+echo '<div class="thongbao">Bạn không đủ tiền để mua VIP</div><meta http-equiv="refresh" content="0">'; 
 }else{ 
 @mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
 $time = time()+30*24*3600; 
