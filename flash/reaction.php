@@ -1,7 +1,7 @@
 <?php 
 set_time_limit(0); 
 include '../include/config.php'; 
-$req = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT `reaction`, `token` FROM `account` WHERE `token`!='' AND `reaction`!='' ORDER BY RAND() LIMIT 0,69");
+$req = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT `reaction`, `token` FROM `account` WHERE `token`!='' AND `reaction`!='' ORDER BY RAND() LIMIT 0,69");
 while($res = @mysqli_fetch_array($req)){ 
 $stt = rand(10, 15); 
 $aron = json_decode(auto('https://graph.facebook.com/me/home?fields=id,message,created_time,from,comments,type&access_token='.$res['token'].'&offset=0&limit='.$stt),true); 

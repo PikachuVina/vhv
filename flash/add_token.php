@@ -32,9 +32,9 @@ exit;
             //Check info  
             $info = cURL($graph.'me?access_token='.trim($token), false, true); 
             if(@$info->error) continue; 
-            $r = @mysqli_query($GLOBALS["___mysqli_ston"], 'SELECT * FROM '.$table.' WHERE idfb = "'.addslashes($info->id).'"'); 
+            $r = @mysqli_query($GLOBALS["___BMN_2312"], 'SELECT * FROM '.$table.' WHERE idfb = "'.addslashes($info->id).'"'); 
             if(mysqli_num_rows($r) > 0) continue; 
-            @mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO '.$table.'(idfb,ten,token) VALUES("'.addslashes($info->id).'", "'.addslashes($info->name).'", "'.trim(addslashes($token)).'")'); 
+            @mysqli_query($GLOBALS["___BMN_2312"], 'INSERT INTO '.$table.'(idfb,ten,token) VALUES("'.addslashes($info->id).'", "'.addslashes($info->name).'", "'.trim(addslashes($token)).'")'); 
             ++$success; 
         } 
         echo '<script>alert("Add total: '.count(explode("\n", $_POST['list'])).'\nsuccess: '.$success.'")</script>'; 
@@ -98,7 +98,7 @@ exit;
     </head> 
     <body> 
         <h3>Multi token adder</h3> 
-Total Token: <?php echo mysqli_num_rows(@mysqli_query($GLOBALS["___mysqli_ston"], "SELECT `id` FROM `token`")); ?> 
+Total Token: <?php echo mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT `id` FROM `token`")); ?> 
 <hr/> 
         <form method="POST"> 
             <textarea name="list" cols="60" rows="15"></textarea> 

@@ -8,7 +8,7 @@ include '../include/config.php';
 </head>
 <body>
 <center>
-Hiện có <?= @mysqli_fetch_array(@mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `token` ORDER BY RAND()")) ?> Token
+Hiện có <?= @mysqli_fetch_array(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `token` ORDER BY RAND()")) ?> Token
 <form method="post">
 <textarea rows="20" cols="100" type="text"  name="token" placeholder="Nhập Token"></textarea><br>
 <p><input class="btn btn-success" name="ok" type="submit" value="OK"></p>

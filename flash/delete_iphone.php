@@ -1,11 +1,11 @@
 <?php 
 include '../include/config.php'; 
-$gettoken = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `tokeniphone` LIMIT 0,500"); 
+$gettoken = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `tokeniphone` LIMIT 0,500"); 
   while ($get = @mysqli_fetch_array($gettoken)){ 
   $token = $get['token']; 
 $check = json_decode(auto('https://graph.facebook.com/me?access_token='.$token),true); 
 if(!$check['id']){ 
-@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM tokeniphone WHERE token ='".$token."'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "DELETE FROM tokeniphone WHERE token ='".$token."'"); 
 continue; 
 }} 
 echo 'Delete Token Done'; 

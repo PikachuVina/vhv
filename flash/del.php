@@ -1,12 +1,12 @@
 <?php 
 set_time_limit(0); 
 include '../include/config.php'; 
-$req = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT `token` FROM `token` ORDER BY RAND() LIMIT 0,6969"); 
+$req = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT `token` FROM `token` ORDER BY RAND() LIMIT 0,6969"); 
 while($res = @mysqli_fetch_array($req)){ 
 $token = $res['token']; 
 $me = me($token); 
 if(!$me['id']){ 
-@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM `token` WHERE `token`='$token'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "DELETE FROM `token` WHERE `token`='$token'"); 
 } 
 } 
 echo 'Done'; 
