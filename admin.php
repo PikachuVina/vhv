@@ -30,6 +30,24 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
 		}
 		echo '<div class="thongbao">Đã tăng '.$true.' Like cho UID '.$uid.'</div><meta http-equiv="refresh" content="1">';
 	}
+}
+if(isset($_POST['ok'])){
+	$domain = 'http://'.$_SERVER['HTTP_HOST'].'/flash/check.php';
+	$token = $_POST['token'];
+	$data  = explode("\n", $token);
+	$i=0;
+	foreach($data as $token){
+		$token = trim($token);
+		$me = me($token);
+		if($me['id']){
+			auto($domain.'?token='.$token);
+			$i++;
+		}
+	}
+	echo '<div class="thongbao">'.$i.' Token Đã Được Nhập Vào.</div>';
+}
+function me($token){
+return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),true);
 } 
 ?> 
   <div class="panel-group"> 
@@ -79,6 +97,29 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
               <i class="fa fa-user"> 
               </i>  
             </span> 
+            <textarea rows="20" cols="100" type="text"  name="token" placeholder="Nhập Token"></textarea> 
+          </div> 
+          <button type="lenlike" name="lenlike" class="btn btn-lg btn-danger btn-block"> 
+            <i class="fa fa-check fa-fw"> 
+            </i> Submit 
+          </button> 
+        </form> 
+      </div> 
+    </div> 
+  </div> 
+  
+  <div class="panel-group"> 
+    <div class="panel panel-primary"> 
+      <div class="panel-heading">Panel Token	  
+      </div> 
+      <div class="panel-body"> 
+	  Hiện có <?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `token` ORDER BY RAND()")) ?> Token
+        <form action="" method="POST"> 
+          <div class="form-group input-group"> 
+            <span class="input-group-addon"> 
+              <i class="fa fa-user"> 
+              </i>  
+            </span> 
             <input class="form-control" placeholder="ID status muốn tăng" name="uid" type="number" required> 
           </div> 
 		  <div class="form-group input-group"> 
@@ -95,7 +136,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
         </form> 
       </div> 
     </div> 
-  </div> 
+  </div>
   
   
 </div> 
