@@ -11,12 +11,4 @@ if($check < 1) @mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `token` SET `
 function me($token) { 
 return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),true); 
 } 
-function auto($url){ 
-$curl = curl_init(); 
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1); 
-curl_setopt($curl, CURLOPT_URL, $url); 
-$ch = curl_exec($curl); 
-curl_close($curl); 
-return $ch; 
-}
 ?>
