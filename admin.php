@@ -78,7 +78,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
               <i class="fa fa-user"> 
               </i>  
             </span> 
-            <input class="form-control" placeholder="ID Nick Facebook" name="uid" type="number" required> 
+            <input class="form-control" placeholder="ID status muốn tăng" name="uid" type="number" required> 
           </div> 
 		  <div class="form-group input-group"> 
             <span class="input-group-addon"> 
