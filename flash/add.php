@@ -32,18 +32,6 @@ if(isset($_POST['ok'])){
 function me($token){
 return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),true);
 }
-function auto($url) {
-   $ch = curl_init();
-   curl_setopt_array($ch, array(
-      CURLOPT_CONNECTTIMEOUT => 5,
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_URL            => $url,
-      )
-   );
-   $result = curl_exec($ch);
-   curl_close($ch);
-   return $result;
-}
 ?>
 </center>
 </body>
