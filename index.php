@@ -13,7 +13,7 @@ $password = htmlspecialchars($_POST['password']);
 $captcha = htmlspecialchars($_POST['captcha']); 
 $captcha_number = htmlspecialchars($_POST['captcha_number']); 
 if($username && $password && $captcha){ 
-$check = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
+$check = @mysqli_num_rows(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
 if($captcha != $captcha_number ){ 
 echo '<div class="thongbao">Captcha bạn nhập vào không đúng, Vui lòng nhập lại</div>'; 
 }else if($check < 1){ 

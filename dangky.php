@@ -10,9 +10,9 @@ $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']); 
 $captcha = htmlspecialchars($_POST['captcha']); 
 $captcha_number = htmlspecialchars($_POST['captcha_number']); 
-$check = @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT COUNT(*) FROM `ACCOUNT` WHERE `username`='$username'")); 
+$check = @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username'")); 
 if(!$username || !$password || $captcha != $captcha_number){ 
-echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin</div>'; 
+echo '<div class="thongbao">Hãy nhập lại Captcha</div>'; 
 }else if($check > 0){ 
 echo $check.'<div class="thongbao">Username đã tồn tại</div>'; 
 }else{ 
