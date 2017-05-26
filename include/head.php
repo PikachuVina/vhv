@@ -128,6 +128,9 @@ $version = '1.0';
                   <li>
                     <a href="/"><i class="fa fa-home"></i> Home</a>
                   </li>
+                  <?php if($_SESSION['user'] == 1){
+                  echo "<li><a href='/admin.html'><i class='fa fa-tachometer'></i> Panel Admin</a></li>";
+                  } ?>
 				  <li>
                     <a href="/dangky.html"><i class="fa fa-group"></i> Đăng Ký</a>
                   </li>

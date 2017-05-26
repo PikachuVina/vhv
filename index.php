@@ -164,9 +164,6 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
           </button> 
           <button type="submit" name="del" class="btn btn-danger">Del 
           </button>
-		  <?php if($_SESSION['user'] == 1){
-		  echo "<a href='/admin.html' target='_blank'><button class='btn btn-danger'>Admin</button></a>";
-		  } ?>
         </form> 
       </div> 
     </div> 
