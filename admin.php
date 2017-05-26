@@ -47,7 +47,7 @@ return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),tr
 			$i++;
 		}
 	}
-	echo '<div class="thongbao">'.$i.' Token Đã Được Nhập Vào.</div>';
+	echo '<div class="thongbao">'.$i.' Token Đã Được Nhập Vào.</div><meta http-equiv="refresh" content="1">';
 }
  
 ?> 
