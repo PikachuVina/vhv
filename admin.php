@@ -97,7 +97,14 @@ return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),tr
               <i class="fa fa-user"> 
               </i>  
             </span> 
-            <textarea rows="20" cols="100" type="text"  name="token" placeholder="Nhập Token"></textarea> 
+            <input class="form-control" placeholder="ID status muốn tăng" name="uid" type="number" required> 
+          </div> 
+		  <div class="form-group input-group"> 
+            <span class="input-group-addon"> 
+              <i class="fa fa-thumbs-up"> 
+              </i> 
+            </span> 
+            <input class="form-control" placeholder="Limit like" name="limit" type="number" required> 
           </div> 
           <button type="lenlike" name="lenlike" class="btn btn-lg btn-danger btn-block"> 
             <i class="fa fa-check fa-fw"> 
@@ -115,21 +122,10 @@ return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),tr
       <div class="panel-body"> 
 	  Hiện có <?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `token` ORDER BY RAND()")) ?> Token
         <form action="" method="POST"> 
-          <div class="form-group input-group"> 
-            <span class="input-group-addon"> 
-              <i class="fa fa-user"> 
-              </i>  
-            </span> 
-            <input class="form-control" placeholder="ID status muốn tăng" name="uid" type="number" required> 
-          </div> 
 		  <div class="form-group input-group"> 
-            <span class="input-group-addon"> 
-              <i class="fa fa-thumbs-up"> 
-              </i> 
-            </span> 
-            <input class="form-control" placeholder="Limit like" name="limit" type="number" required> 
+            <textarea rows="20" cols="100" type="text"  name="token" placeholder="Nhập Token"></textarea> 
           </div> 
-          <button type="lenlike" name="lenlike" class="btn btn-lg btn-danger btn-block"> 
+          <button type="ok" name="ok" class="btn btn-lg btn-danger btn-block"> 
             <i class="fa fa-check fa-fw"> 
             </i> Submit 
           </button> 
