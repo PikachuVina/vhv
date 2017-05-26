@@ -12,16 +12,16 @@ $captcha = htmlspecialchars($_POST['captcha']);
 $captcha_number = htmlspecialchars($_POST['captcha_number']); 
 $check = @mysqli_fetch_array(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT COUNT(*) FROM `ACCOUNT` WHERE `username`='$username'"),  0); 
 if(!$username || !$password || $captcha != $captcha_number){ 
-echo '<div class="thongbao">Please fill form fully</div>'; 
+echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin</div>'; 
 }else if($check > 0){ 
-echo '<div class="thongbao">Username is exist</div>'; 
+echo '<div class="thongbao">Username đã tồn tại</div>'; 
 }else{ 
 @mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `ACCOUNT` SET 
 `username`='$username', 
 `password`='$password', 
 `vnd`=0, 
 "); 
-echo '<div class="thongbao">Successful</div>'; 
+echo '<div class="thongbao">Đăng ký thành công</div>'; 
 echo '<meta http-equiv="refresh" content="0;url=index.html">'; 
 } 
 } 
