@@ -19,13 +19,13 @@ die('<center>À Được</center>');
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
 @mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `account` ( 
-  `id` int(11) NOT NULL AUTO_INCREMENT, 
-  `username` varchar(32) NOT NULL, 
-  `password` varchar(32)  NOT NULL, 
-  `vnd` int(11)  NOT NULL, 
-  `limit` int(11) NOT NULL,  
-  PRIMARY KEY (`id`) 
- ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `vnd` int(10) NOT NULL,
+  `limit` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+ ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 "); 
 @mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `vip` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 

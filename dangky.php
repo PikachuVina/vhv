@@ -3,34 +3,32 @@ include './include/config.php';
 include './include/head.php'; 
 $rand = rand(100000,999999); 
 ?> 
-<div class="col-md-4 col-lg-offset-4"> 
+<div class="col-lg-4 col-lg-offset-4"> 
         <?php 
 if(isset($_POST['submit'])){ 
 $username = htmlspecialchars($_POST['username']); 
-$password = htmlspecialchars($_POST['password']);
-$limit = htmlspecialchars($_POST['limit']); 
+$password = htmlspecialchars($_POST['password']); 
 $captcha = htmlspecialchars($_POST['captcha']); 
 $captcha_number = htmlspecialchars($_POST['captcha_number']); 
-$check = @mysqli_fetch_array(@mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `ACCOUNT` WHERE `username`='$username'"),  0); 
+$check = @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username'")); 
 if(!$username || !$password || $captcha != $captcha_number){ 
-echo '<div class="thongbao">Please fill form fully</div>'; 
+echo '<div class="thongbao">Hãy nhập lại Captcha</div>'; 
 }else if($check > 0){ 
-echo '<div class="thongbao">Username is exist</div>'; 
+echo '<div class="thongbao">Username đã tồn tại</div>'; 
 }else{ 
-@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO `ACCOUNT` SET 
+@mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `ACCOUNT` SET 
 `username`='$username', 
 `password`='$password', 
-`vnd`=0, 
-`limit`='$limit'
+`vnd`='0',
 "); 
-echo '<div class="thongbao">Successful</div>'; 
-echo '<meta http-equiv="refresh" content="0;url=index.php">'; 
+echo '<div class="thongbao">Đăng ký thành công</div>'; 
+echo '<meta http-equiv="refresh" content="0;url=index.html">'; 
 } 
 } 
 ?> 
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
-      <div class="panel-heading">Sign Up 
+      <div class="panel-heading">Đăng Ký Tài Khoản 
       </div> 
       <div class="panel-body"> 
         <form action="" method="POST"> 
@@ -48,13 +46,6 @@ echo '<meta http-equiv="refresh" content="0;url=index.php">';
             </span> 
             <input class="form-control" placeholder="Password" name="password" type="password" required> 
           </div>
-		  <div class="form-group input-group"> 
-            <span class="input-group-addon"> 
-              <i class="fa fa-lock"> 
-              </i> 
-            </span> 
-            <input class="form-control" placeholder="limit" name="limit" type="text" required> 
-          </div> 
           <div class="form-group input-group"> 
             <span class="input-group-addon"><input type="text" id="captcha_number" name="captcha_number" value="<?= $rand ?>" readonly=""></span> 
             <input type="number" class="form-control" name="captcha" placeholder="Captcha" required>                                         
