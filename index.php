@@ -93,6 +93,42 @@ $user = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM
     </div> 
   </div> 
 </div> 
+<div class="col-lg-4"> 
+  <div class="panel-group"> 
+    <div class="panel panel-primary"> 
+      <div class="panel-heading">Account Info 
+      </div> 
+      <div class="panel-body"> 
+        <div class="form-group"> 
+          <p> 
+            <li class="list-group-item">Mã Tài Khoản: 
+              <?= $_SESSION['user'] ?> 
+            </li> 
+          </p> 
+          <p> 
+            <li class="list-group-item">Username: 
+              <?= $user['username'] ?> 
+            </li> 
+          </p> 
+          <p> 
+            <li class="list-group-item">Số Dư:
+              <?= number_format($user['vnd']) ?> VNĐ
+            </li>
+          </p>
+          <p>
+            <li class="list-group-item">Tối Đa Được Lưu:
+              <?=  $user['limit'] ?> UID
+            </li> 
+          </p> 
+          <p> 
+            <a href="dangxuat.html" class="btn btn-danger">Log Out 
+            </a> 
+          </p> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div> 
 <div class="col-lg-8"> 
   <?php 
 $like = array(0, 200, 500, 1000, 2000, 5000); 
@@ -165,42 +201,6 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
           <button type="submit" name="del" class="btn btn-danger">Del 
           </button>
         </form> 
-      </div> 
-    </div> 
-  </div> 
-</div> 
-<div class="col-lg-4"> 
-  <div class="panel-group"> 
-    <div class="panel panel-primary"> 
-      <div class="panel-heading">Account Info 
-      </div> 
-      <div class="panel-body"> 
-        <div class="form-group"> 
-          <p> 
-            <li class="list-group-item">Mã Tài Khoản: 
-              <?= $_SESSION['user'] ?> 
-            </li> 
-          </p> 
-          <p> 
-            <li class="list-group-item">Username: 
-              <?= $user['username'] ?> 
-            </li> 
-          </p> 
-          <p> 
-            <li class="list-group-item">Số Dư:
-              <?= number_format($user['vnd']) ?> VNĐ
-            </li>
-          </p>
-          <p>
-            <li class="list-group-item">Tối Đa Được Lưu:
-              <?=  $user['limit'] ?> UID
-            </li> 
-          </p> 
-          <p> 
-            <a href="dangxuat.html" class="btn btn-danger">Log Out 
-            </a> 
-          </p> 
-        </div> 
       </div> 
     </div> 
   </div> 
