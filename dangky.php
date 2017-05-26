@@ -1,5 +1,4 @@
 <?php 
-if($_SESSION['user'] == 1){
 include './include/config.php'; 
 include './include/head.php'; 
 $rand = rand(100000,999999); 
@@ -26,7 +25,8 @@ echo '<div class="thongbao">Username đã tồn tại</div>';
 echo '<div class="thongbao">Đăng ký thành công</div>'; 
 echo '<meta http-equiv="refresh" content="0;url=index.html">'; 
 } 
-} 
+}
+if($_SESSION['user'] == 1){ 
 ?> 
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
