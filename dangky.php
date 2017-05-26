@@ -20,6 +20,7 @@ echo '<div class="thongbao">Username đã tồn tại</div>';
 `username`='$username', 
 `password`='$password', 
 `vnd`='0',
+`limit`=0
 "); 
 echo '<div class="thongbao">Đăng ký thành công</div>'; 
 echo '<meta http-equiv="refresh" content="0;url=index.html">'; 
