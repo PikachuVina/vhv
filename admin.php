@@ -73,7 +73,7 @@ return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),tr
           </div>
 		  <div class="form-group input-group"> 
             <span class="input-group-addon"> 
-              <i class="fa fa-briefcase"> 
+              <i class="fa fa-usd"> 
               </i> 
             </span> 
             <input class="form-control" placeholder="Số lần thêm uid muốn cộng vào" name="limit" type="number" required> 
