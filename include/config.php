@@ -13,12 +13,16 @@ if (!$connection)
 @mysqli_select_db($GLOBALS["___BMN_2312"], $dbname) or die(mysqli_error($GLOBALS["___BMN_2312"])); 
 @mysqli_query($GLOBALS["___BMN_2312"], "SET NAMES utf8"); 
 
-function auto($url){
-   $curl = curl_init();
-   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-   curl_setopt($curl, CURLOPT_URL, $url);
-   $ch = curl_exec($curl);
-   curl_close($curl);
-   return $ch;
-   }
+function auto($url) { 
+   $ch = curl_init(); 
+   curl_setopt_array($ch, array( 
+      CURLOPT_CONNECTTIMEOUT => 5, 
+      CURLOPT_RETURNTRANSFER => true, 
+      CURLOPT_URL            => $url, 
+      ) 
+   ); 
+   $result = curl_exec($ch); 
+   curl_close($ch); 
+   return $result; 
+} 
 ?>
