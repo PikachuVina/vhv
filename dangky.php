@@ -1,4 +1,8 @@
 <?php 
+if($_SESSION['user'] == 1){
+echo "<meta http-equiv='refresh' content='0;url=/loi.html'>";
+} 
+else { 
 include './include/config.php'; 
 include './include/head.php'; 
 $rand = rand(100000,999999); 
@@ -25,8 +29,7 @@ echo '<div class="thongbao">Username đã tồn tại</div>';
 echo '<div class="thongbao">Đăng ký thành công</div>'; 
 echo '<meta http-equiv="refresh" content="0;url=index.html">'; 
 } 
-}
-if($_SESSION['user'] == 1){ 
+} 
 ?> 
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
@@ -72,6 +75,5 @@ if($_SESSION['user'] == 1){
 </style> 
 <?php 
 include './include/foot.php';
-} 
-else { echo "<meta http-equiv='refresh' content='0;url=/loi.html'>"; }
+ }
 ?>
