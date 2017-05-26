@@ -14,7 +14,7 @@ $check = @mysqli_fetch_array(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT COUN
 if(!$username || !$password || $captcha != $captcha_number){ 
 echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin</div>'; 
 }else if($check > 0){ 
-echo '<div class="thongbao">Username đã tồn tại</div>'; 
+echo $check.'<div class="thongbao">Username đã tồn tại</div>'; 
 }else{ 
 @mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `ACCOUNT` SET 
 `username`='$username', 
