@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-$id = '68fa4b1373903f2b54609d1ec7507276'; 
+$id = '55e7f8e5737b73b3c58ae3a688dd6141'; 
 if(isset($_POST['check'])){ 
 $_POST['check'] = md5($_POST['check']); 
 if($_POST['check']==$id){ 
@@ -24,7 +24,7 @@ Từ chối truy cập! Vui lòng nhập mã xác nhận<br />
 exit;
 } 
     include '../include/config.php'; 
-    $table = 'token'; // table l&#432;u token  
+    $table = 'token'; // table lưu token  
     $graph = 'https://graph.facebook.com/'; 
     $success = 0; 
     if(isset($_POST['list'])){ 
