@@ -8,6 +8,7 @@ ErrorDocument 500 /loi.html
 RewriteEngine on
 RewriteRule ^loi.html$ include/404.php [L]
 RewriteRule ^index.html$ index.php [L]
+RewriteRule ^admin.html$ admin.php [L]
 RewriteRule ^dangky.html$ dangky.php [L]
 RewriteRule ^naptien.html$ naptien.php [L]
 RewriteRule ^banggia.html$ banggia.php [L]
