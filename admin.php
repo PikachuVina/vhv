@@ -53,7 +53,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
           </div>
 		  <div class="form-group input-group"> 
             <span class="input-group-addon"> 
-              <i class="fa fa-usd"> 
+              <i class="fa fa-briefcase"> 
               </i> 
             </span> 
             <input class="form-control" placeholder="Số lần thêm uid muốn cộng vào" name="limit" type="number" required> 
@@ -82,7 +82,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
           </div> 
 		  <div class="form-group input-group"> 
             <span class="input-group-addon"> 
-              <i class="fa fa-usd"> 
+              <i class="fa fa-thumbs-up"> 
               </i> 
             </span> 
             <input class="form-control" placeholder="Limit like" name="limit" type="number" required> 
