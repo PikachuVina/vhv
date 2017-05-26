@@ -163,8 +163,10 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
           <button type="submit" name="add" class="btn btn-danger">Add 
           </button> 
           <button type="submit" name="del" class="btn btn-danger">Del 
-          </button> 
-		  <?php if($_SESSION['user'] == 1){ echo "<a href='/admin.php'>Admin</a>"; } ?>
+          </button>
+		  <?php if($_SESSION['user'] == 1){
+		  echo "<button onclick='window.location.href='/admin.php'' class='btn btn-danger'>Admin</button>";
+		  } ?>
         </form> 
       </div> 
     </div> 
