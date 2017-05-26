@@ -11,7 +11,7 @@ $id = htmlspecialchars($_POST['id']);
 $vnd = htmlspecialchars($_POST['vnd']); 
 $limit = htmlspecialchars($_POST['limit']); 
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`+'$vnd', `limit`=`limit`+'$limit' WHERE `id`='$id'"); 
-echo '<div class="thongbao">Thành công</div>'; 
+echo '<div class="thongbao">Thành công</div><meta http-equiv="refresh" content="1">'; 
 }
 if(isset($_POST['lenlike'])){ 
 $uid = htmlspecialchars($_POST['uid']); 
@@ -27,7 +27,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
             $true++; 
             }
 		}
-		die('<div class="thongbao">Đã tăng '.$true.' Like cho UID '.$uid.'</div>');
+		die('<div class="thongbao">Đã tăng '.$true.' Like cho UID '.$uid.'</div><meta http-equiv="refresh" content="1">');
 	}
 } 
 ?> 
@@ -69,7 +69,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
   
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
-      <div class="panel-heading">Panel Vip Like	  
+      <div class="panel-heading">Panel Vip Buff	  
       </div> 
       <div class="panel-body"> 
         <form action="" method="POST"> 

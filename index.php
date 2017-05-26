@@ -32,7 +32,7 @@ echo '<meta http-equiv="refresh" content="0">';
       </div>
       <div class="panel-body">
         <li class="list-group-item">
-          Khi đăng nhập và sử dụng hệ thống bạn đã đồng ý với <a href="/rule.html">Qui định người dùng</a></br>
+          Khi đăng nhập và sử dụng hệ thống bạn đã đồng ý với <a href="/rule.html">Quy định người dùng</a></br>
           Cập nhật hệ thống ngày: 24/05/2017 </br>
           + Panel quản lí cho CTV mua vip like tương tác, mua người theo dõi và buzz like.</br>
           + Hệ thống giúp bạn cài like trực tiếp cho khách hàng của bạn. </br>
@@ -165,7 +165,7 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
           <button type="submit" name="del" class="btn btn-danger">Del 
           </button>
 		  <?php if($_SESSION['user'] == 1){
-		  echo "<a href='/admin.html'><button class='btn btn-danger'>Admin</button></a>";
+		  echo "<a href='/admin.html' target='_blank'><button class='btn btn-danger'>Admin</button></a>";
 		  } ?>
         </form> 
       </div> 
