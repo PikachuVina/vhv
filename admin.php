@@ -1,9 +1,9 @@
 <?php 
 set_time_limit(0);
 session_start(); 
+if($_SESSION['user'] == 1){
 include './include/config.php'; 
-include './include/head.php'; 
-if($_SESSION['user'] == 1){ 
+include './include/head.php'; 	
 ?> 
 <div class="col-lg-4 col-lg-offset-4"> 
 <?php 
@@ -118,7 +118,7 @@ return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),tr
   
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
-      <div class="panel-heading">Panel Token - Hiện có Toàn Bộ <b><?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `token` ORDER BY RAND()")) ?></b> Token Trên Hệ Thống  
+      <div class="panel-heading">Panel ADD Token - Hiện có Toàn Bộ <b><?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `token` ORDER BY RAND()")) ?></b> Token Trên Hệ Thống  
       </div> 
       <div class="panel-body"> 
         <form action="" method="POST"> 
