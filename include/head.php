@@ -132,8 +132,10 @@ $version = '1.0';
                   echo "<li><a href='/admin.html'><i class='fa fa-tachometer'></i> Panel Admin</a></li>";
                   } ?>
 				  <li>
-                    <a href="/dangky.html"><i class="fa fa-group"></i> Đăng Ký</a>
+                  <?php if($_SESSION['user'] == 1){
+                  echo "<a href='/dangky.html'><i class='fa fa-group'></i> Đăng Ký</a>";
                   </li>
+				  } ?>
 				  <li>
                     <a href="/naptien.html"><i class="fa fa-money"></i> Nạp Tiền</a>
                   </li>
