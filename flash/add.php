@@ -14,7 +14,7 @@ Hiện có <?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT *
 <p><input class="btn btn-success" name="ok" type="submit" value="OK"></p>
 </form>
 <?php
-$domain = 'http://'.$_SERVER['HTTP_HOST'].'/quanly/check.php';
+$domain = 'http://'.$_SERVER['HTTP_HOST'].'/flash/check.php';
 if(isset($_POST['ok'])){
 	$token = $_POST['token'];
 	$data  = explode("\n", $token);
