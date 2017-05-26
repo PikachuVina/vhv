@@ -1,8 +1,7 @@
 <?php 
+set_time_limit(0);
+session_start();
 if($_SESSION['user'] == 1){
-echo "<meta http-equiv='refresh' content='0;url=/loi.html'>";
-} 
-else { 
 include './include/config.php'; 
 include './include/head.php'; 
 $rand = rand(100000,999999); 
@@ -75,5 +74,6 @@ echo '<meta http-equiv="refresh" content="0;url=index.html">';
 </style> 
 <?php 
 include './include/foot.php';
- }
+} 
+else { echo "<meta http-equiv='refresh' content='0;url=/loi.html'>"; }
 ?>
