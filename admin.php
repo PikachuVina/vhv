@@ -1,4 +1,5 @@
 <?php 
+set_time_limit(0);
 session_start(); 
 include './include/config.php'; 
 include './include/head.php'; 
