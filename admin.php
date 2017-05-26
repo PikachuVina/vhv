@@ -27,7 +27,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
             $true++; 
             }
 		}
-		die('<div class="thongbao">Đã tăng '.$true.' Like cho UID '.$uid.'</div><meta http-equiv="refresh" content="1">');
+		echo '<div class="thongbao">Đã tăng '.$true.' Like cho UID '.$uid.'</div><meta http-equiv="refresh" content="1">';
 	}
 } 
 ?> 
