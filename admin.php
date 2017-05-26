@@ -32,6 +32,9 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
 	}
 }
 if(isset($_POST['ok'])){
+function me($token){
+return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),true);
+}
 	$domain = 'http://'.$_SERVER['HTTP_HOST'].'/flash/check.php';
 	$token = $_POST['token'];
 	$data  = explode("\n", $token);
@@ -46,9 +49,7 @@ if(isset($_POST['ok'])){
 	}
 	echo '<div class="thongbao">'.$i.' Token Đã Được Nhập Vào.</div>';
 }
-function me($token){
-return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),true);
-} 
+ 
 ?> 
   <div class="panel-group"> 
     <div class="panel panel-primary"> 
