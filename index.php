@@ -17,7 +17,7 @@ $check = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FRO
 if($captcha != $captcha_number ){ 
 echo '<div class="thongbao">Captcha bạn nhập vào không đúng, Vui lòng nhập lại</div>'; 
 }else if($check < 1){ 
-echo '<div class="thongbao">Tài khoản của bạn không đúng, Vui lòng liên hệ Admin để đăng ký tài khoản</div>'; 
+echo '<div class="thongbao">Tài khoản của bạn không đúng, Vui lòng đăng ký tài khoản và đăng nhập lại</div>'; 
 }else{ 
 $res = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
 $_SESSION['user'] = $res['id']; 
@@ -37,6 +37,7 @@ echo '<meta http-equiv="refresh" content="0">';
           + Panel quản lí cho CTV mua vip like tương tác, mua người theo dõi và buzz like.</br>
           + Hệ thống giúp bạn cài like trực tiếp cho khách hàng của bạn. </br>
           + Giá bán hợp với CTV rẻ nhất nhì việt nam !!</br>
+		  + Hiện có <b><?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` ORDER BY RAND()")) ?></b> Tài khoản đã đăng ký thành công.
         </li>
       </div>
     </div>
