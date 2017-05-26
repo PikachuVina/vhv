@@ -21,7 +21,7 @@ $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RA
 	if($result)
 	{           
 	$true = "0";
-		while($row = mysqli_fetch_array($result, MYSQL_ASSOC))
+		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 		{
             $lresult = auto('https://graph.facebook.com/'.$uid.'/likes?access_token='.$row['token'].'&method=post');            
             if($lresult == "true"){
