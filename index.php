@@ -37,7 +37,7 @@ echo '<meta http-equiv="refresh" content="0">';
           + Panel quản lí cho CTV mua vip like tương tác, mua người theo dõi và buzz like.</br>
           + Hệ thống giúp bạn cài like trực tiếp cho khách hàng của bạn. </br>
           + Giá bán hợp với CTV rẻ nhất nhì việt nam !!</br>
-		  + Hiện có <b><?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` ORDER BY RAND()")) ?></b> Tài khoản đã đăng ký thành công.
+		  + Hiện có <b><?= @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` ORDER BY RAND()")) ?></b> Tài khoản đã đăng ký thành công trên hệ thống.
         </li>
       </div>
     </div>
