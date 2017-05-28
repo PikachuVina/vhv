@@ -7,6 +7,17 @@ include './include/head.php';
 ?> 
 <div class="col-lg-4 col-lg-offset-4"> 
 <?php 
+if(isset($_POST['doipass'])){ 
+$id = htmlspecialchars($_POST['id']); 
+$pass = htmlspecialchars($_POST['pass']);
+if(!$id || !$pass){ 
+	echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div>'; 
+		}
+else	{	
+@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `password`=`$pass' WHERE `id`='$id'"); 
+echo '<div class="thongbao">Đổi pass thành công</div><meta http-equiv="refresh" content="1">'; 
+}
+}
 if(isset($_POST['submit'])){ 
 $id = htmlspecialchars($_POST['id']); 
 $vnd = htmlspecialchars($_POST['vnd']); 
@@ -79,6 +90,35 @@ return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),tr
             <input class="form-control" placeholder="Số lần thêm uid muốn cộng vào" name="limit" type="number" required> 
           </div> 
           <button type="submit" name="submit" class="btn btn-lg btn-danger btn-block"> 
+            <i class="fa fa-check fa-fw"> 
+            </i> Submit 
+          </button> 
+        </form> 
+      </div> 
+    </div> 
+  </div> 
+  
+  <div class="panel-group"> 
+    <div class="panel panel-primary"> 
+      <div class="panel-heading">Panel Change Pass  
+      </div> 
+      <div class="panel-body"> 
+        <form action="" method="POST"> 
+          <div class="form-group input-group"> 
+            <span class="input-group-addon"> 
+              <i class="fa fa-user"> 
+              </i>  
+            </span> 
+            <input class="form-control" placeholder="Mã tài khoản muốn đổi" name="id" type="number" required> 
+          </div> 
+		  <div class="form-group input-group"> 
+            <span class="input-group-addon"> 
+              <i class="fa fa-thumbs-up"> 
+              </i> 
+            </span> 
+            <input class="form-control" placeholder="Pass muốn đổi" name="pass" type="text" required> 
+          </div> 
+          <button type="doipass" name="doipass" class="btn btn-lg btn-danger btn-block"> 
             <i class="fa fa-check fa-fw"> 
             </i> Submit 
           </button> 
