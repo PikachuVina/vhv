@@ -9,14 +9,9 @@ include './include/head.php';
 <?php 
 if(isset($_POST['doipass'])){ 
 $id = htmlspecialchars($_POST['id']); 
-$pass = htmlspecialchars($_POST['pass']);
-if(!$id || !$pass){ 
-	echo '<div class="thongbao">Hãy hoàn thành toàn bộ thông tin còn thiếu và thử lại</div>'; 
-		}
-else	{	
+$pass = htmlspecialchars($_POST['pass']);	
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `password`=`$pass' WHERE `id`='$id'"); 
 echo '<div class="thongbao">Đổi pass thành công</div><meta http-equiv="refresh" content="1">'; 
-}
 }
 if(isset($_POST['submit'])){ 
 $id = htmlspecialchars($_POST['id']); 
