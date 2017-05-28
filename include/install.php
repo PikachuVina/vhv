@@ -1,13 +1,21 @@
 <?php 
 error_reporting(0);
-include("config.php"); 
+include("config.php");
+
+//tài khoản mật khẩu truy cập file install
 $config['user'] = 'bmn2312'; 
 $config['pass'] = 'admin'; 
-  
+
+//thông tin khi cài user admin
+$username = 'admin';
+$password = 'admin';
+$vnd = '100000000';
+$limit = '10';
+
 if ($_SERVER['PHP_AUTH_USER'] != $config['user'] || $_SERVER['PHP_AUTH_PW'] != $config['pass']){ 
 header('WWW-Authenticate: Basic realm="Login Install"'); 
 header('HTTP/1.0 401 Unauthorized'); 
-die('<center>À Được</center>'); 
+echo "<meta http-equiv='refresh' content='0;url=/loi.html'>";
 } 
 
 @mysqli_query($GLOBALS["___BMN_2312"], "CREATE TABLE IF NOT EXISTS `token` ( 
@@ -52,5 +60,11 @@ die('<center>À Được</center>');
   `thoigian` varchar(32) NOT NULL, 
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
+"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `ACCOUNT` SET 
+  `username`='$username', 
+  `password`='$password', 
+  `vnd`='$vnd',
+  `limit`='$limit'
 "); 
 ?>
