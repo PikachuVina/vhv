@@ -24,7 +24,7 @@ include './include/head.php';
 	 while ($getinfo = @mysqli_fetch_array($infotv)){
 		$matk= $getinfo['id'];
 		$username= $getinfo['username'];
-		$vnd= $getinfo['vnd'];
+		$vnd= number_format($getinfo['vnd']);
 		$limit= $getinfo['limit'];
 ?>
           <tr>
