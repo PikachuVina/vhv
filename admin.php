@@ -10,7 +10,7 @@ include './include/head.php';
 if(isset($_POST['doipass'])){ 
 $id = htmlspecialchars($_POST['id']); 
 $pass = htmlspecialchars($_POST['pass']);	
-@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `password`=`$pass' WHERE `id`='$id'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `password` = '".$pass."' WHERE `id` = '".$id."'"); 
 echo '<div class="thongbao">Đổi pass thành công</div><meta http-equiv="refresh" content="1">'; 
 }
 if(isset($_POST['submit'])){ 
