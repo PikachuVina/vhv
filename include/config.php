@@ -1,4 +1,9 @@
-<?php 
+<?php
+/*
+Copy vui lòng để lại dòng này
+Bản quyền: BMN.2312
+Facebook: BMN.2312
+*/
 error_reporting(0);
 $host = "mysql4.gear.host"; 
 $username = "nghia3"; 
