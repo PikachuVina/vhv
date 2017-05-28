@@ -10,20 +10,20 @@ include './include/head.php';
 if(isset($_POST['doipass'])){ 
 $id = htmlspecialchars($_POST['id']); 
 $pass = htmlspecialchars($_POST['pass']);	
-@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `password` = '".$pass."' WHERE `id` = '".$id."'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `password` = '".$pass."' WHERE `id` = '".$id."'"); 
 echo '<div class="thongbao">Đổi pass thành công</div><meta http-equiv="refresh" content="1">'; 
 }
 if(isset($_POST['submit'])){ 
 $id = htmlspecialchars($_POST['id']); 
 $vnd = htmlspecialchars($_POST['vnd']); 
 $limit = htmlspecialchars($_POST['limit']); 
-@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `ACCOUNT` SET `vnd`=`vnd`+'$vnd', `limit`=`limit`+'$limit' WHERE `id`='$id'"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`+'$vnd', `limit`=`limit`+'$limit' WHERE `id`='$id'"); 
 echo '<div class="thongbao">Thành công</div><meta http-equiv="refresh" content="1">'; 
 }
 if(isset($_POST['lenlike'])){ 
 $uid = htmlspecialchars($_POST['uid']); 
 $limit = htmlspecialchars($_POST['limit']); 
-$result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM TOKEN ORDER BY RAND() LIMIT 0, {$limit}");
+$result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM `token` ORDER BY RAND() LIMIT 0, {$limit}");
 	if($result)
 	{           
 	$true = "0";

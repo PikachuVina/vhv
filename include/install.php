@@ -61,10 +61,11 @@ echo "<meta http-equiv='refresh' content='0;url=/loi.html'>";
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-@mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `ACCOUNT` SET 
-  `username`='$username', 
-  `password`='$password', 
-  `vnd`='$vnd',
-  `limit`='$limit'
-"); 
+@mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `account` SET 
+  `username` = '".$username."', 
+  `password` = '".$password."', 
+  `vnd` = '".$vnd."',
+  `limit` = '".$limit."'
+");
+echo "Cai Dat Hoan Thanh !!! BMN2312";
 ?>

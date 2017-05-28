@@ -20,7 +20,7 @@ include './include/head.php';
         </thead>
         <tbody>
 <?php
-	$infotv = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` order by id");
+	$infotv = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `account` order by id");
 	 while ($getinfo = @mysqli_fetch_array($infotv)){
 		$matk= $getinfo['id'];
 		$username= $getinfo['username'];

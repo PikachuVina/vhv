@@ -13,13 +13,13 @@ $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']); 
 $captcha = htmlspecialchars($_POST['captcha']); 
 $captcha_number = htmlspecialchars($_POST['captcha_number']); 
-$check = @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `ACCOUNT` WHERE `username`='$username'")); 
+$check = @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `account` WHERE `username`='$username'")); 
 if(!$username || !$password || $captcha != $captcha_number){ 
 echo '<div class="thongbao">Hãy nhập lại Captcha</div>'; 
 }else if($check > 0){ 
 echo '<div class="thongbao">Username đã tồn tại</div>'; 
 }else{ 
-@mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `ACCOUNT` SET 
+@mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `account` SET 
 `username`='$username', 
 `password`='$password', 
 `vnd`='0',

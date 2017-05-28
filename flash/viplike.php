@@ -2,7 +2,7 @@
 set_time_limit(0); 
 include '../include/config.php'; 
 $like = array(0, 200, 500, 1000, 2000, 5000); 
-$req = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT `idfb`, `goi` FROM `VIP` ORDER BY RAND() LIMIT 0,5"); 
+$req = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT `idfb`, `goi` FROM `vip` ORDER BY RAND() LIMIT 0,5"); 
 while($res = @mysqli_fetch_array($req)){ 
 $idfb = $res['idfb']; 
 $reqt = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT `token` FROM `token` ORDER BY RAND() LIMIT 0,69"); 
