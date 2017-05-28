@@ -6,7 +6,6 @@ include './include/head.php';
 <div class="col-lg-8 col-lg-offset-2">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <i class="fa fa-star-half-o fa-spin">
       </i> Danh Sách Thành Viên Toàn Hệ Thống
     </div>
     <div class="panel-body">
