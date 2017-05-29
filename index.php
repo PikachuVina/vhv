@@ -161,7 +161,7 @@ else if($id == $kiemtraid['idfb']){
 else if($goi != 1 && $goi!= 2 && $goi!= 3 && $goi!= 4 && $goi!= 5 && $goi!= 6 && $goi!= 7 && $goi!= 8 && $goi!= 9 && $goi!= 10)
 		{
     @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-5000 WHERE `id`=".$_SESSION['user']."");
-    echo '<div class="thongbao">Tài khoản số <b>'.$_SESSION['user'].'</b> bị trừ <b>5000VNĐ</b> vì cố tình bug vào hệ thống</div><meta http-equiv="refresh" content="2">'; 
+    echo '<div class="thongbao">Tài khoản số <b>'.$_SESSION['user'].'</b> bị trừ <b>5000VNĐ</b> vì cố tình bug vào hệ thống</div>'; 
 		}
 else	{ 
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
