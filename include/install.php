@@ -41,7 +41,8 @@ echo "<meta http-equiv='refresh' content='0;url=/loi.html'>";
   `name` varchar(32)  NOT NULL, 
   `user` varchar(32)  NOT NULL, 
   `goi` varchar(11) NOT NULL, 
-  `time` varchar(11) NOT NULL, 
+  `time` varchar(11) NOT NULL,
+  `timemua` varchar(11) NOT NULL, 
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
