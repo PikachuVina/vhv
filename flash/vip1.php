@@ -48,5 +48,5 @@ function auto($url) {
    return $result; 
 } 
 
-echo 'Xong'; 
+//echo 'Xong'; 
 ?> 
