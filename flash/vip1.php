@@ -4,11 +4,11 @@ set_time_limit(0);
 $like = array(0, 150, 300, 500, 700, 1000, 1500, 2000, 3000, 4000, 5000);   
 include '../include/config.php'; 
 $resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi` = 1"); 
-$restk = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM token ORDER BY RAND() LIMIT 0,60"); 
+//$restk = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM token ORDER BY RAND() LIMIT 0,60"); 
 $vipid = @mysqli_fetch_array($resid);
 $stat = json_decode(auto('https://graph.facebook.com/'.$idfb.'/feed?fields=id&access_token='.$token.'&limit=1'),true); 
 $countlike = $stat[data][0][likes][count];
-if($countlike <= $like[$vipid['goi']]){
+if($countlike <= 150){
 echo "ok"; 
         }
 else
