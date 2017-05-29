@@ -159,7 +159,7 @@ else if($id == $kiemtraid['idfb']){
 		}
 else	{ 
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
-$time = '2592000';
+$time = '30';
 @mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `vip` SET `idfb`='$id', `name`='$name', `user`=".$user['id'].", `goi`='$goi', `time`='$time'"); 
 echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh" content="0">'; 
 		} 
