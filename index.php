@@ -132,8 +132,8 @@ $user = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM
 </div> 
 <div class="col-lg-8"> 
   <?php 
-$like = array(0, 200, 500, 1000, 2000, 5000); 
-$vnd = array(0, 100000, 200000, 350000, 600000, 1000000); 
+$like = array(0, 150, 300, 500, 700, 1000, 1500, 2000, 3000, 4000, 5000); 
+$vnd = array(0, 45000, 90000, 150000, 210000, 300000, 450000, 600000, 900000, 1200000, 1500000); 
 if(isset($_POST['del'])){ 
 $id = htmlspecialchars($_POST['id']); 
 @mysqli_query($GLOBALS["___BMN_2312"], "DELETE FROM `vip` WHERE `user`=".$user['id']." AND `idfb`='$id'"); 
@@ -142,7 +142,7 @@ echo '<div class="thongbao">Đã xóa ID thành công</div>';
 if(isset($_POST['add'])){ 
 $id = htmlspecialchars($_POST['id']); 
 $name = htmlspecialchars($_POST['name']); 
-$goi = htmlspecialchars($_POST['goi']); 
+$goi = htmlspecialchars($_POST['goi']);
 $check = @mysqli_num_rows(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `user`=".$user['id']."")); 
 $kiemtraid = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT `idfb` FROM `vip` WHERE `idfb`=".$id."")); 
 if(!$id || !$name || !$goi){ 
@@ -159,7 +159,7 @@ else if($id == $kiemtraid['idfb']){
 		}
 else	{ 
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
-$time = time()+30*24*3600; 
+$time = '2592000';
 @mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `vip` SET `idfb`='$id', `name`='$name', `user`=".$user['id'].", `goi`='$goi', `time`='$time'"); 
 echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh" content="0">'; 
 		} 
@@ -185,16 +185,26 @@ echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh"
             <label for="goi">Vip Package: 
             </label> 
             <select name="goi" class="form-control"> 
-              <option value="1"><?= $like[1] ?> Like / Post / <?= $vnd[1] ?> VND 
+              <option value="1"><?= $like[1] ?> Like / Post / <?= $vnd[1] ?> VND / 30 Ngày 
               </option> 
-              <option value="2"><?= $like[2] ?> Like / Post / <?= $vnd[2] ?> VND 
+              <option value="2"><?= $like[2] ?> Like / Post / <?= $vnd[2] ?> VND / 30 Ngày 
               </option> 
-              <option value="3"><?= $like[3] ?> Like / Post / <?= $vnd[3] ?> VND 
+              <option value="3"><?= $like[3] ?> Like / Post / <?= $vnd[3] ?> VND / 30 Ngày  
               </option> 
-              <option value="4"><?= $like[4] ?> Like / Post / <?= $vnd[4] ?> VND 
+              <option value="4"><?= $like[4] ?> Like / Post / <?= $vnd[4] ?> VND / 30 Ngày  
               </option> 
-              <option value="5"><?= $like[5] ?> Like / Post / <?= $vnd[5] ?> VND 
-              </option> 
+              <option value="5"><?= $like[5] ?> Like / Post / <?= $vnd[5] ?> VND / 30 Ngày  
+              </option>
+			  <option value="6"><?= $like[6] ?> Like / Post / <?= $vnd[6] ?> VND / 30 Ngày  
+              </option>
+			  <option value="7"><?= $like[7] ?> Like / Post / <?= $vnd[7] ?> VND / 30 Ngày  
+              </option>
+			  <option value="8"><?= $like[8] ?> Like / Post / <?= $vnd[8] ?> VND / 30 Ngày  
+              </option>
+			  <option value="9"><?= $like[9] ?> Like / Post / <?= $vnd[9] ?> VND / 30 Ngày  
+              </option>
+			  <option value="10"><?= $like[10] ?> Like / Post / <?= $vnd[10] ?> VND / 30 Ngày  
+              </option>
             </select> 
           </div> 
           <button type="submit" name="add" class="btn btn-danger">Add 
@@ -242,7 +252,7 @@ while($res = mysqli_fetch_array($req)){
                 <?= $like[$res['goi']] ?> Like 
               </td> 
               <td> 
-                <?= date("d/m/y", $res['time']) ?> 
+                <?= thoigiantinhvip($res['time']) ?> 
               </td> 
             </tr> 
             <?php 
