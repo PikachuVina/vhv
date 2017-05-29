@@ -14,7 +14,7 @@ while ($vipid = @mysqli_fetch_array($resid)){
         } 
         $stat = json_decode(auto('https://graph.facebook.com/'.$idfb.'/feed?fields=id&access_token='.$token.'&limit=1'),true); 
         $countlike = $stat[data][0][likes][count]; 
-        if($countlike <= 40){ 
+        if($countlike <= 150){ 
             for($i=1;$i<=count($stat['data']);$i++){ 
                 auto('https://graph.facebook.com/'.$stat['data'][$i-1]['id'].'/likes?access_token='.$token.'&method=post'); 
             } 
