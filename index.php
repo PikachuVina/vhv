@@ -1,6 +1,7 @@
 <?php 
 session_start(); 
-include './include/config.php'; 
+include './include/config.php';
+include './include/func.php'; 
 include './include/head.php'; 
 if(!$_SESSION['user']){ 
 $rand = rand(100000,999999); 
@@ -8,10 +9,10 @@ $rand = rand(100000,999999);
 <div class="col-lg-4 col-lg-offset-4"> 
   <?php 
 if(isset($_POST['submit'])){ 
-$username = htmlspecialchars($_POST['username']); 
-$password = htmlspecialchars($_POST['password']); 
-$captcha = htmlspecialchars($_POST['captcha']); 
-$captcha_number = htmlspecialchars($_POST['captcha_number']); 
+$username = isset($_POST['username']) ? baove($_POST['username']) : FALSE;
+$password = isset($_POST['password']) ? baove($_POST['password']) : FALSE;
+$captcha = isset($_POST['captcha']) ? baove($_POST['captcha']) : FALSE;
+$captcha_number = isset($_POST['captcha_number']) ? baove($_POST['captcha_number']) : FALSE;
 if($username && $password && $captcha){ 
 $check = @mysqli_num_rows(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `account` WHERE `username`='$username' AND `password`='$password' ORDER BY RAND()")); 
 if($captcha != $captcha_number ){ 
@@ -135,14 +136,14 @@ $user = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM
 $like = array(0, 150, 300, 500, 700, 1000, 1500, 2000, 3000, 4000, 5000); 
 $vnd = array(0, 45000, 90000, 150000, 210000, 300000, 450000, 600000, 900000, 1200000, 1500000); 
 if(isset($_POST['del'])){ 
-$id = htmlspecialchars($_POST['id']); 
+$id = isset($_POST['id']) ? baove($_POST['id']) : FALSE;
 @mysqli_query($GLOBALS["___BMN_2312"], "DELETE FROM `vip` WHERE `user`=".$user['id']." AND `idfb`='$id'"); 
 echo '<div class="thongbao">Đã xóa ID thành công</div>'; 
 } 
 if(isset($_POST['add'])){ 
-$id = htmlspecialchars($_POST['id']); 
-$name = htmlspecialchars($_POST['name']); 
-$goi = htmlspecialchars($_POST['goi']);
+$id = isset($_POST['id']) ? baove($_POST['id']) : FALSE;
+$name = isset($_POST['name']) ? baove($_POST['name']) : FALSE;
+$goi = isset($_POST['goi']) ? baove($_POST['goi']) : FALSE;
 $check = @mysqli_num_rows(mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `user`=".$user['id']."")); 
 $kiemtraid = @mysqli_fetch_array(mysqli_query($GLOBALS["___BMN_2312"], "SELECT `idfb` FROM `vip` WHERE `idfb`=".$id."")); 
 if(!$id || !$name || !$goi){ 

@@ -2,17 +2,18 @@
 set_time_limit(0);
 session_start();
 if($_SESSION['user'] == 1){
-include './include/config.php'; 
+include './include/config.php';
+include './include/func.php'; 
 include './include/head.php'; 
 $rand = rand(100000,999999); 
 ?> 
 <div class="col-lg-4 col-lg-offset-4"> 
         <?php 
 if(isset($_POST['submit'])){ 
-$username = htmlspecialchars($_POST['username']); 
-$password = htmlspecialchars($_POST['password']); 
-$captcha = htmlspecialchars($_POST['captcha']); 
-$captcha_number = htmlspecialchars($_POST['captcha_number']); 
+$username = isset($_POST['username']) ? baove($_POST['username']) : FALSE;
+$password = isset($_POST['password']) ? baove($_POST['password']) : FALSE;
+$captcha = isset($_POST['captcha']) ? baove($_POST['captcha']) : FALSE;
+$captcha_number = isset($_POST['captcha_number']) ? baove($_POST['captcha_number']) : FALSE;
 $check = @mysqli_num_rows(@mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `account` WHERE `username`='$username'")); 
 if(!$username || !$password || $captcha != $captcha_number){ 
 echo '<div class="thongbao">Hãy nhập lại Captcha</div>'; 

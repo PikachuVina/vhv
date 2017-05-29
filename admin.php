@@ -2,27 +2,28 @@
 set_time_limit(0);
 session_start(); 
 if($_SESSION['user'] == 1){
-include './include/config.php'; 
+include './include/config.php';
+include './include/func.php';
 include './include/head.php'; 	
 ?> 
 <div class="col-lg-4 col-lg-offset-4"> 
 <?php 
 if(isset($_POST['doipass'])){ 
-$id = htmlspecialchars($_POST['id']); 
-$pass = htmlspecialchars($_POST['pass']);	
+$id = isset($_POST['id']) ? baove($_POST['id']) : FALSE;
+$pass = isset($_POST['pass']) ? baove($_POST['pass']) : FALSE;
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `password` = '".$pass."' WHERE `id` = '".$id."'"); 
 echo '<div class="thongbao">Đổi pass thành công</div><meta http-equiv="refresh" content="1">'; 
 }
 if(isset($_POST['submit'])){ 
-$id = htmlspecialchars($_POST['id']); 
-$vnd = htmlspecialchars($_POST['vnd']); 
-$limit = htmlspecialchars($_POST['limit']); 
+$id = isset($_POST['id']) ? baove($_POST['id']) : FALSE;
+$vnd = isset($_POST['vnd']) ? baove($_POST['vnd']) : FALSE;
+$limit = isset($_POST['limit']) ? baove($_POST['limit']) : FALSE;
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`+'$vnd', `limit`=`limit`+'$limit' WHERE `id`='$id'"); 
 echo '<div class="thongbao">Thành công</div><meta http-equiv="refresh" content="1">'; 
 }
 if(isset($_POST['lenlike'])){ 
-$uid = htmlspecialchars($_POST['uid']); 
-$limit = htmlspecialchars($_POST['limit']); 
+$uid = isset($_POST['uid']) ? baove($_POST['uid']) : FALSE;
+$limit = isset($_POST['limit']) ? baove($_POST['limit']) : FALSE;
 $result = @mysqli_query($GLOBALS["___BMN_2312"],"SELECT * FROM `token` ORDER BY RAND() LIMIT 0, {$limit}");
 	if($result)
 	{           

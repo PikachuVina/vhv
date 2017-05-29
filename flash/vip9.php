@@ -2,6 +2,7 @@
 error_reporting(0);
 set_time_limit(0);  
 include '../include/config.php'; 
+include '../include/func.php'; 
 $resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi` = 9"); 
 $restk = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM token ORDER BY RAND() LIMIT 0,100"); 
 while ($vipid = @mysqli_fetch_array($resid)){ 
@@ -21,17 +22,5 @@ while ($vipid = @mysqli_fetch_array($resid)){
         } 
     } 
 }
-function auto($url) { 
-   $ch = curl_init(); 
-   curl_setopt_array($ch, array( 
-      CURLOPT_CONNECTTIMEOUT => 3, 
-      CURLOPT_RETURNTRANSFER => true, 
-      CURLOPT_URL            => $url, 
-      ) 
-   ); 
-   $result = curl_exec($ch); 
-   curl_close($ch); 
-   return $result; 
-} 
 echo 'Xong'; 
 ?> 
