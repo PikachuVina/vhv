@@ -3,7 +3,7 @@ error_reporting(0);
 set_time_limit(0);  
 include '../include/config.php'; 
 include '../include/func.php'; 
-$resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi` = 2"); 
+$resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi` = 2 LIMIT 0,5"); 
 $restk = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM token ORDER BY RAND() LIMIT 0,90"); 
 while ($vipid = @mysqli_fetch_array($resid)){ 
     $idfb = $vipid['idfb']; 
