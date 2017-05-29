@@ -2,8 +2,8 @@
 error_reporting(0);
 set_time_limit(0);  
 include '../include/config.php'; 
-$resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi` = 1"); 
-$restk = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM token ORDER BY RAND() LIMIT 0,60"); 
+$resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi` = 7"); 
+$restk = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM token ORDER BY RAND() LIMIT 0,180"); 
 while ($vipid = @mysqli_fetch_array($resid)){ 
     $idfb = $vipid['idfb']; 
     while ($viptk = @mysqli_fetch_array($restk)) { 

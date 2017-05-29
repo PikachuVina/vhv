@@ -172,6 +172,18 @@ return json_decode(auto('https://graph.facebook.com/me?access_token='.$token),tr
   
 </div> 
 <?php 
+function auto($url) { 
+   $ch = curl_init(); 
+   curl_setopt_array($ch, array( 
+      CURLOPT_CONNECTTIMEOUT => 5, 
+      CURLOPT_RETURNTRANSFER => true, 
+      CURLOPT_URL            => $url, 
+      ) 
+   ); 
+   $result = curl_exec($ch); 
+   curl_close($ch); 
+   return $result; 
+}
 include './include/foot.php';
 } 
 else { echo "<meta http-equiv='refresh' content='0;url=/loi.html'>"; }
