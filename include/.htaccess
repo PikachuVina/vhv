@@ -6,7 +6,7 @@
     order allow,deny 
     deny from all 
 </Files>
-<Files end.php>; 
+<Files func.php>; 
     order allow,deny 
     deny from all 
 </Files>

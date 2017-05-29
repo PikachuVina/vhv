@@ -158,6 +158,10 @@ else if($user['vnd'] < $vnd[$goi]){
 else if($id == $kiemtraid['idfb']){
 	echo '<div class="thongbao">UID đã tồn tại trên hệ thống</div>'; 
 		}
+else if($goi != 3 && $goi!= 7 && $goi!= 30 && $goi!= 60 && $goi!= 90 && $goi!= 365)
+    {
+    @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-5000 WHERE `id`='$_SESSION['user']'");
+    echo '<div class="thongbao">Tài khoản số <b>'.$_SESSION['user'].'</b> bị trừ <b>5000</b> vì cố tình bug vào hệ thống</div>'; 
 else	{ 
 @mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
 $time = '1498632100';
