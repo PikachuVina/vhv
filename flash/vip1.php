@@ -20,7 +20,7 @@ $token = 'EAAAAAYsX7TsBAOSjIqHb5Oos8ZCauo4vPjhT10KccszzZCdkni5D4ZA9kwZB6avFJKAWu
 $stat = json_decode(auto('https://graph.facebook.com/'.$idfb.'/feed?fields=id&access_token='.$token.'&limit=1'),true); 
 $countlike = $stat[data][0][likes][count];
 if($countlike < 150){
-echo "ok".$countlike; 
+echo $countlike; 
         }
 else
 {
