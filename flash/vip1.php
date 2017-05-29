@@ -5,7 +5,7 @@ $like = array(0, 150, 300, 500, 700, 1000, 1500, 2000, 3000, 4000, 5000);
 include '../include/config.php'; 
 $resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi` = 1"); 
 //$restk = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM token ORDER BY RAND() LIMIT 0,60");
-$token = 'EAAAAAYsX7TsBAOrfWi51ZBtx5rEpcbchBb81lVVNs5QyGj7hXWiaGCVmUfs0xA4Q6SEEyl9FTh1VA0R6wB6ETSOgV5CZAV34PmBo0LJZAtMib40gZBJDKJ109l9KQZAM7nAZCBkw0enzqazTspgkIFdTwW2Ef3AzYFGLty0Rx8EJhrHxl9DTw9OiGwLQIlrrySFh3mzrAfugZDZD';  
+$token = 'EAAAAAYsX7TsBAOSjIqHb5Oos8ZCauo4vPjhT10KccszzZCdkni5D4ZA9kwZB6avFJKAWu9xbyq5yZCcFvOHaKAF79EFFOp1pILy9A2fNPIgnKxL4YTJkezyjU80lvp45rYwiPaSIYni6IGRfybHEQsFm6B6unfIsJ0m2mFOHDV2nvGssVIgRnDIgdvx1Ev7E4y63I7UCr8wZDZD';  
 $vipid = @mysqli_fetch_array($resid);
 $stat = json_decode(auto('https://graph.facebook.com/'.$idfb.'/feed?fields=id&access_token='.$token.'&limit=1'),true); 
 $countlike = $stat[data][0][likes][count];
