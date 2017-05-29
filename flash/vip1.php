@@ -8,7 +8,7 @@ $resid = @mysqli_query($GLOBALS["___BMN_2312"], "SELECT * FROM `vip` WHERE `goi`
 $vipid = @mysqli_fetch_array($resid);
 $stat = json_decode(auto('https://graph.facebook.com/'.$idfb.'/feed?fields=id&access_token='.$token.'&limit=1'),true); 
 $countlike = $stat[data][0][likes][count];
-if($countlike <= 150){
+if($countlike <= 300){
 echo "ok"; 
         }
 else
