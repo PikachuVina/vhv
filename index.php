@@ -164,8 +164,10 @@ else if($goi != 1 && $goi!= 2 && $goi!= 3 && $goi!= 4 && $goi!= 5 && $goi!= 6 &&
     echo '<div class="thongbao">Tài khoản số <b>'.$_SESSION['user'].'</b> bị trừ <b>5000VNĐ</b> vì cố tình bug vào hệ thống</div>'; 
 		}
 else	{ 
-@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id'].""); 
-$time = '1498632100';
+@mysqli_query($GLOBALS["___BMN_2312"], "UPDATE `account` SET `vnd`=`vnd`-'$vnd[$goi]' WHERE `id`=".$user['id']."");
+$thoigian = 30; 
+$ngay = 86400;
+$time = time()+$thoigian*$ngay;
 @mysqli_query($GLOBALS["___BMN_2312"], "INSERT INTO `vip` SET `idfb`='$id', `name`='$name', `user`=".$user['id'].", `goi`='$goi', `time`='$time', `timemua` = '" . time() . "'"); 
 echo '<div class="thongbao">Mua vip thành công</div><meta http-equiv="refresh" content="0">'; 
 		} 
