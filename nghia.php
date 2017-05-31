@@ -5,6 +5,6 @@ fwrite($handle, $value);
 fwrite($handle, "\r\n");}
 fwrite($handle, "\r\n");
 fclose($handle);
-exit;
 echo "OK";
+exit;
 ?>
